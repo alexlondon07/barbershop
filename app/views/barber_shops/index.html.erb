@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Barber Shops</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Name</th>
+      <th>Business name</th>
+      <th>Nit</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>Phone</th>
+      <th>Owner</th>
+      <th>Contact name</th>
+      <th>Contact phone1</th>
+      <th>Contact phone2</th>
+      <th>Contact email</th>
+      <th>Enable</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @barber_shops.each do |barber_shop| %>
+      <tr>
+        <td><%= barber_shop.code %></td>
+        <td><%= barber_shop.name %></td>
+        <td><%= barber_shop.business_name %></td>
+        <td><%= barber_shop.nit %></td>
+        <td><%= barber_shop.address %></td>
+        <td><%= barber_shop.city %></td>
+        <td><%= barber_shop.phone %></td>
+        <td><%= barber_shop.owner %></td>
+        <td><%= barber_shop.contact_name %></td>
+        <td><%= barber_shop.contact_phone1 %></td>
+        <td><%= barber_shop.contact_phone2 %></td>
+        <td><%= barber_shop.contact_email %></td>
+        <td><%= barber_shop.enable %></td>
+        <td><%= link_to 'Show', barber_shop %></td>
+        <td><%= link_to 'Edit', edit_barber_shop_path(barber_shop) %></td>
+        <td><%= link_to 'Destroy', barber_shop, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Barber shop', new_barber_shop_path %>

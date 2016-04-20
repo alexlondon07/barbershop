@@ -1,0 +1,69 @@
+<%= form_for(@barber_shop) do |f| %>
+  <% if @barber_shop.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@barber_shop.errors.count, "error") %> prohibited this barber_shop from being saved:</h2>
+
+      <ul>
+      <% @barber_shop.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :code %><br>
+    <%= f.text_field :code %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :business_name %><br>
+    <%= f.text_field :business_name %>
+  </div>
+  <div class="field">
+    <%= f.label :nit %><br>
+    <%= f.text_field :nit %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br>
+    <%= f.text_field :address %>
+  </div>
+  <div class="field">
+    <%= f.label :city %><br>
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    <%= f.label :phone %><br>
+    <%= f.text_field :phone %>
+  </div>
+  <div class="field">
+    <%= f.label :owner %><br>
+    <%= f.text_field :owner %>
+  </div>
+  <div class="field">
+    <%= f.label :contact_name %><br>
+    <%= f.text_field :contact_name %>
+  </div>
+  <div class="field">
+    <%= f.label :contact_phone1 %><br>
+    <%= f.text_field :contact_phone1 %>
+  </div>
+  <div class="field">
+    <%= f.label :contact_phone2 %><br>
+    <%= f.text_field :contact_phone2 %>
+  </div>
+  <div class="field">
+    <%= f.label :contact_email %><br>
+    <%= f.text_field :contact_email %>
+  </div>
+  <div class="field">
+    <%= f.label :enable %><br>
+    <%= f.check_box :enable %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

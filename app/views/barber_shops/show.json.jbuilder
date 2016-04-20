@@ -1,0 +1,1 @@
+json.extract! @barber_shop, :id, :code, :name, :business_name, :nit, :address, :city, :phone, :owner, :contact_name, :contact_phone1, :contact_phone2, :contact_email, :enable, :created_at, :updated_at
