@@ -29,7 +29,7 @@
       <td>
         <%= link_to '', barber_shop, :class => 'btn btn-primary  btn-sm glyphicon glyphicon-eye-open' %></span>
         <%= link_to '', edit_barber_shop_path(barber_shop), :class => 'btn btn-info  btn-sm glyphicon glyphicon-pencil' %></span>
-        <%= link_to ' ', barber_shop, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'small btn  btn-danger btn-sm glyphicon glyphicon-trash' %></span>
+        <%= link_to ' ', barber_shop, method: :delete, data: { confirm: t('app.messages_confirmation_delete') }, :class => 'small btn  btn-danger btn-sm glyphicon glyphicon-trash' %></span>
       </td>
       <td><%= barber_shop.code %></td>
       <td><%= barber_shop.name %></td>

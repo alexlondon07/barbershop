@@ -24,6 +24,7 @@ en:
 
   app:
     actions: "Actions"
+    save: "Save"
     errors_messages: "Please correct the following errors:"
     messages_confirmation_delete: "You are deleting information irreversibly... do you want to continue?"
 

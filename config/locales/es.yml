@@ -229,7 +229,6 @@ es:
     back: "Volver"
     save: "Guardar"
     messages_confirmation_delete: "Va a eliminar información de forma irreversible... ¿Desea continuar?"
-    code: "Código"
 
     menu:
       home: "Inicio"
