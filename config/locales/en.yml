@@ -21,3 +21,17 @@
 
 en:
   hello: "Hello world"
+
+  app:
+    actions: "Actions"
+    errors_messages: "Please correct the following errors:"
+    messages_confirmation_delete: "You are deleting information irreversibly... do you want to continue?"
+
+  barber_shops:
+    index:
+      title: "Listing BarberShops"
+    edit:
+      title: "Edit BarberShops"
+    new:
+      title: "Create BarberShops"
+      information: "Information to BarberShops"

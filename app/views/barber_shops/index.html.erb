@@ -1,51 +1,58 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Barber Shops</h1>
+<h1><%= t 'barber_shops.index.title' %></h1>
+<%= link_to t('barber_shops.new.title'), new_barber_shop_path, class: "btn btn-primary btn-lg active pull-right", role: "button" %>
 
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
-      <th>Code</th>
-      <th>Name</th>
-      <th>Business name</th>
-      <th>Nit</th>
-      <th>Address</th>
-      <th>City</th>
-      <th>Phone</th>
-      <th>Owner</th>
-      <th>Contact name</th>
-      <th>Contact phone1</th>
-      <th>Contact phone2</th>
-      <th>Contact email</th>
-      <th>Enable</th>
-      <th colspan="3"></th>
+      <th style="width: 150px;"><%= t 'app.actions' %></th>
+      <th><%= t 'barber_shops.code' %></th>
+      <th><%= t 'barber_shops.name' %></th>
+      <th><%= t 'barber_shops.business_name' %></th>
+      <th><%= t 'barber_shops.nit' %></th>
+      <th><%= t 'barber_shops.address' %></th>
+      <th><%= t 'barber_shops.city' %></th>
+      <th><%= t 'barber_shops.phone' %></th>
+      <th><%= t 'barber_shops.owner' %></th>
+      <th><%= t 'barber_shops.contact_name' %></th>
+      <th><%= t 'barber_shops.contact_phone1' %></th>
+      <th><%= t 'barber_shops.contact_phone2' %></th>
+      <th><%= t 'barber_shops.email' %></th>
+      <th><%= t 'barber_shops.enable' %></th>
     </tr>
   </thead>
 
   <tbody>
     <% @barber_shops.each do |barber_shop| %>
-      <tr>
-        <td><%= barber_shop.code %></td>
-        <td><%= barber_shop.name %></td>
-        <td><%= barber_shop.business_name %></td>
-        <td><%= barber_shop.nit %></td>
-        <td><%= barber_shop.address %></td>
-        <td><%= barber_shop.city %></td>
-        <td><%= barber_shop.phone %></td>
-        <td><%= barber_shop.owner %></td>
-        <td><%= barber_shop.contact_name %></td>
-        <td><%= barber_shop.contact_phone1 %></td>
-        <td><%= barber_shop.contact_phone2 %></td>
-        <td><%= barber_shop.contact_email %></td>
-        <td><%= barber_shop.enable %></td>
-        <td><%= link_to 'Show', barber_shop %></td>
-        <td><%= link_to 'Edit', edit_barber_shop_path(barber_shop) %></td>
-        <td><%= link_to 'Destroy', barber_shop, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
+    <tr>
+      <td>
+        <%= link_to '', barber_shop, :class => 'btn btn-primary  btn-sm glyphicon glyphicon-eye-open' %></span>
+        <%= link_to '', edit_barber_shop_path(barber_shop), :class => 'btn btn-info  btn-sm glyphicon glyphicon-pencil' %></span>
+        <%= link_to ' ', barber_shop, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'small btn  btn-danger btn-sm glyphicon glyphicon-trash' %></span>
+      </td>
+      <td><%= barber_shop.code %></td>
+      <td><%= barber_shop.name %></td>
+      <td><%= barber_shop.business_name %></td>
+      <td><%= barber_shop.nit %></td>
+      <td><%= barber_shop.address %></td>
+      <td><%= barber_shop.city %></td>
+      <td><%= barber_shop.phone %></td>
+      <td><%= barber_shop.owner %></td>
+      <td><%= barber_shop.contact_name %></td>
+      <td><%= barber_shop.contact_phone1 %></td>
+      <td><%= barber_shop.contact_phone2 %></td>
+      <td><%= barber_shop.contact_email %></td>
+      <td><%= case barber_shop.enable
+      when true
+        "SI"
+      when false
+        "NO"
+      end %>
+    </td>
+  </tr>
+  <% end %>
+</tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Barber shop', new_barber_shop_path %>

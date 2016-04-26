@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
+  #Facilitar lo que la Internacionalizacion
+  scope "(:locale)", locale: /es|en/ do
   resources :barber_shops
+  end
   get 'welcome/index'
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -1,69 +1,69 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Code:</strong>
+  <strong><%= t 'barber_shops.code' %>:</strong>
   <%= @barber_shop.code %>
 </p>
 
 <p>
-  <strong>Name:</strong>
+  <strong><%= t 'barber_shops.name' %>:</strong>
   <%= @barber_shop.name %>
 </p>
 
 <p>
-  <strong>Business name:</strong>
+  <strong><%= t 'barber_shops.business_name' %>:</strong>
   <%= @barber_shop.business_name %>
 </p>
 
 <p>
-  <strong>Nit:</strong>
+  <strong><%= t 'barber_shops.nit' %>:</strong>
   <%= @barber_shop.nit %>
 </p>
 
 <p>
-  <strong>Address:</strong>
+  <strong><%= t 'barber_shops.address' %>:</strong>
   <%= @barber_shop.address %>
 </p>
 
 <p>
-  <strong>City:</strong>
+  <strong><%= t 'barber_shops.city' %>:</strong>
   <%= @barber_shop.city %>
 </p>
 
 <p>
-  <strong>Phone:</strong>
+  <strong><%= t 'barber_shops.phone' %>:</strong>
   <%= @barber_shop.phone %>
 </p>
 
 <p>
-  <strong>Owner:</strong>
+  <strong><%= t 'barber_shops.owner' %>:</strong>
   <%= @barber_shop.owner %>
 </p>
 
 <p>
-  <strong>Contact name:</strong>
+  <strong><%= t 'barber_shops.contact_name' %>:</strong>
   <%= @barber_shop.contact_name %>
 </p>
 
 <p>
-  <strong>Contact phone1:</strong>
+  <strong><%= t 'barber_shops.contact_phone1' %>:</strong>
   <%= @barber_shop.contact_phone1 %>
 </p>
 
 <p>
-  <strong>Contact phone2:</strong>
+  <strong><%= t 'barber_shops.contact_phone2' %>:</strong>
   <%= @barber_shop.contact_phone2 %>
 </p>
 
 <p>
-  <strong>Contact email:</strong>
+  <strong><%= t 'barber_shops.contact_email' %>:</strong>
   <%= @barber_shop.contact_email %>
 </p>
 
 <p>
-  <strong>Enable:</strong>
+  <strong><%= t 'barber_shops.enable' %>:</strong>
   <%= @barber_shop.enable %>
 </p>
 
-<%= link_to 'Edit', edit_barber_shop_path(@barber_shop) %> |
-<%= link_to 'Back', barber_shops_path %>
+<%= link_to t('app.edit'), edit_barber_shop_path(@barber_shop) %> |
+<%= link_to t('app.back'), barber_shops_path %>

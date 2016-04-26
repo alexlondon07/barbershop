@@ -56,3 +56,4 @@ end
 gem 'faker'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'bootstrap-generators', '~> 3.3.4'
+gem 'font-awesome-rails'

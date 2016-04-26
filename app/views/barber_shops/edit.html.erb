@@ -1,6 +1,6 @@
-<h1>Editing Barber Shop</h1>
+<h1><%= t 'barber_shops.edit.title' %></h1>
+
+<%= link_to t('app.show'), @barber_shop %> |
+<%= link_to t('app.back'), barber_shops_path %>
 
 <%= render 'form' %>
-
-<%= link_to 'Show', @barber_shop %> |
-<%= link_to 'Back', barber_shops_path %>

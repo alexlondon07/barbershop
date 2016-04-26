@@ -1,69 +1,124 @@
-<%= form_for(@barber_shop) do |f| %>
-  <% if @barber_shop.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@barber_shop.errors.count, "error") %> prohibited this barber_shop from being saved:</h2>
-
-      <ul>
+<%= form_for @barber_shop, :html => { :class => 'form-horizontal' } do |f| %>
+<% if @barber_shop.errors.any? %>
+<div class="col-lg-8 col-lg-offset-2">
+  <div class="alert alert-danger">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <strong><%= t 'app.errors_messages' %></strong>
+    <ul>
       <% @barber_shop.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+      <li><%= message %></li>
       <% end %>
-      </ul>
-    </div>
-  <% end %>
+    </ul>
+  </div>
+</div>
+<% end %>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2">
 
-  <div class="field">
-    <%= f.label :code %><br>
-    <%= f.text_field :code %>
+      <div class="col-sm-6">
+        <div class="form-horizontal">
+
+          <div>
+            <h3 style=''><%= t 'barber_shops.information_to_barbershops' %></h3>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-4 control-label"><%= t 'barber_shops.code' %><font color="#a94442">*</font></label>
+            <div class="col-sm-8">
+              <%= f.text_field :code %>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-4 control-label"><%= t 'barber_shops.name' %><font color="#a94442">*</font></label>
+            <div class="col-sm-8">
+              <%= f.text_field :name %>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-4 control-label"><%= t 'barber_shops.business_name' %></label>
+            <div class="col-sm-8">
+              <%= f.text_field :business_name %>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-4 control-label"><%= t 'barber_shops.nit' %></label>
+            <div class="col-sm-8">
+              <%= f.text_field :nit %>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-4 control-label"><%= t 'barber_shops.address' %></label>
+            <div class="col-sm-8">
+              <%= f.text_field :address %>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-4 control-label"><%= t 'barber_shops.city' %></label>
+            <div class="col-sm-8">
+              <%= f.text_field :city %>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-4 control-label"><%= t 'barber_shops.phone' %></label>
+            <div class="col-sm-8">
+              <%= f.text_field :phone %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-horizontal">
+          <div>
+            <h3 style=''><%= t 'barber_shops.information_to_contact' %></h3>
+          </div>
+
+          <div class="form-group">
+            <label class="col-sm-4 control-label"><%= t 'barber_shops.owner' %></label>
+            <div class="col-sm-8">
+              <%= f.text_field :owner %>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-4 control-label"><%= t 'barber_shops.contact_name' %></label>
+            <div class="col-sm-8">
+              <%= f.text_field :contact_name %>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-4 control-label"><%= t 'barber_shops.contact_phone1' %></label>
+            <div class="col-sm-8">
+              <%= f.text_field :contact_phone1 %>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-4 control-label"><%= t 'barber_shops.contact_phone2' %></label>
+            <div class="col-sm-8">
+              <%= f.text_field :contact_phone2 %>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-4 control-label"><%= t 'barber_shops.contact_email' %></label>
+            <div class="col-sm-8">
+              <%= f.text_field :contact_email %>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-4 control-label"><%= t 'barber_shops.enable' %></label>
+            <div class="col-sm-8">
+              <%= f.check_box :enable %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12">
+        <div class="form-horizontal">
+          <div class="actions">
+            <%= f.submit "Save", class: "btn btn-primary pull-right" %>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :business_name %><br>
-    <%= f.text_field :business_name %>
-  </div>
-  <div class="field">
-    <%= f.label :nit %><br>
-    <%= f.text_field :nit %>
-  </div>
-  <div class="field">
-    <%= f.label :address %><br>
-    <%= f.text_field :address %>
-  </div>
-  <div class="field">
-    <%= f.label :city %><br>
-    <%= f.text_field :city %>
-  </div>
-  <div class="field">
-    <%= f.label :phone %><br>
-    <%= f.text_field :phone %>
-  </div>
-  <div class="field">
-    <%= f.label :owner %><br>
-    <%= f.text_field :owner %>
-  </div>
-  <div class="field">
-    <%= f.label :contact_name %><br>
-    <%= f.text_field :contact_name %>
-  </div>
-  <div class="field">
-    <%= f.label :contact_phone1 %><br>
-    <%= f.text_field :contact_phone1 %>
-  </div>
-  <div class="field">
-    <%= f.label :contact_phone2 %><br>
-    <%= f.text_field :contact_phone2 %>
-  </div>
-  <div class="field">
-    <%= f.label :contact_email %><br>
-    <%= f.text_field :contact_email %>
-  </div>
-  <div class="field">
-    <%= f.label :enable %><br>
-    <%= f.check_box :enable %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+</div>
 <% end %>
