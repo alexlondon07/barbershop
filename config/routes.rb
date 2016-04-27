@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   #Facilitar lo que la Internacionalizacion
   scope "(:locale)", locale: /es|en/ do
   resources :barber_shops
+  resources :services
   end
   get 'welcome/index'
 

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  code: MyString
+  price: 1.5
+  description: MyText
+  enable: false
+  barber_shop_id: 
+
+two:
+  name: MyString
+  code: MyString
+  price: 1.5
+  description: MyText
+  enable: false
+  barber_shop_id: 

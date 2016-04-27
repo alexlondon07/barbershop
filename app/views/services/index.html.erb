@@ -1,0 +1,39 @@
+<div class="page-header">
+  <%= link_to new_service_path, class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    New Service
+  <% end %>
+  <h1>Listing services</h1>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+            <th>Name</th>
+            <th>Code</th>
+            <th>Price</th>
+            <th>Description</th>
+            <th>Enable</th>
+            <th>Barber shop</th>
+            <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= content_tag_for(:tr, @services) do |service| %>
+            <td><%= service.name %></td>
+            <td><%= service.code %></td>
+            <td><%= service.price %></td>
+            <td><%= service.description %></td>
+            <td><%= service.enable %></td>
+            <td><%= service.barber_shop %></td>
+            <td><%= link_to 'Show', service %></td>
+        <td><%= link_to 'Edit', edit_service_path(service) %></td>
+        <td><%= link_to 'Destroy', service, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
+    </tbody>
+  </table>
+</div>
