@@ -1,5 +1,20 @@
 <p id="notice"><%= notice %></p>
 
+<div class="page-header">
+
+  <%= link_to barber_shops_path, class: 'btn btn-default' do %>
+  <span class="glyphicon glyphicon-list-alt"></span>
+  <%= t('app.back') %>
+  <% end %>
+
+  <%= link_to edit_barber_shop_path(@barber_shop), class: 'btn btn-primary' do %>
+  <span class="glyphicon glyphicon-pencil"></span>
+  <%= t('app.edit') %>
+  <% end %>
+
+  <h1><%= t('barber_shops.show.title') %></h1>
+</div>
+
 <p>
   <strong><%= t 'barber_shops.code' %>:</strong>
   <%= @barber_shop.code %>
@@ -64,6 +79,3 @@
   <strong><%= t 'barber_shops.enable' %>:</strong>
   <%= @barber_shop.enable %>
 </p>
-
-<%= link_to t('app.edit'), edit_barber_shop_path(@barber_shop) %> |
-<%= link_to t('app.back'), barber_shops_path %>

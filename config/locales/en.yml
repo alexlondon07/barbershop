@@ -36,3 +36,5 @@ en:
     new:
       title: "Create BarberShops"
       information: "Information to BarberShops"
+    show:
+        title: "Show BarberShops"

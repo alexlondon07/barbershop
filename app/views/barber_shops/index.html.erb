@@ -1,50 +1,55 @@
 <p id="notice"><%= notice %></p>
 
-<h1><%= t 'barber_shops.index.title' %></h1>
-<%= link_to t('barber_shops.new.title'), new_barber_shop_path, class: "btn btn-primary btn-lg active pull-right", role: "button" %>
+<div class="table-responsive">
 
-<table id="barber_shops_lists" class="table table-striped" cellspacing="0" width="100%">
-  <thead>
-    <tr>
-      <th><%= t 'app.actions' %></th>
-      <th><%= t 'barber_shops.code' %></th>
-      <th><%= t 'barber_shops.name' %></th>
-      <th><%= t 'barber_shops.business_name' %></th>
-      <th><%= t 'barber_shops.nit' %></th>
-      <th><%= t 'barber_shops.address' %></th>
-      <th><%= t 'barber_shops.city' %></th>
-      <th><%= t 'barber_shops.phone' %></th>
-      <th><%= t 'barber_shops.owner' %></th>
-      <th><%= t 'barber_shops.enable' %></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @barber_shops.each do |barber_shop| %>
-    <tr>
-      <td style="width: 150px; display: block">
-        <%= link_to '', barber_shop, :class => 'btn btn-primary  btn-sm glyphicon glyphicon-eye-open' %></span>
-        <%= link_to '', edit_barber_shop_path(barber_shop), :class => 'btn btn-info  btn-sm glyphicon glyphicon-pencil' %></span>
-        <%= link_to ' ', barber_shop, method: :delete, data: { confirm: t('app.messages_confirmation_delete') }, :class => 'small btn  btn-danger btn-sm glyphicon glyphicon-trash' %></span>
-      </td>
-      <td><%= barber_shop.code %></td>
-      <td><%= barber_shop.name %></td>
-      <td><%= barber_shop.business_name %></td>
-      <td><%= barber_shop.nit %></td>
-      <td><%= barber_shop.address %></td>
-      <td><%= barber_shop.city %></td>
-      <td><%= barber_shop.phone %></td>
-      <td><%= barber_shop.owner %></td>
-      <td><%= case barber_shop.enable
-      when true
-        "SI"
-      when false
-        "NO"
-      end %>
-    </td>
-  </tr>
+  <h1><%= t 'barber_shops.index.title' %></h1>
+  <%= link_to new_barber_shop_path, class: "btn btn-primary btn-lg active pull-right", role: "button" do %>
+  <span class="glyphicon glyphicon-plus"></span>
+  <%= t 'barber_shops.new.title' %>
   <% end %>
-</tbody>
-</table>
 
+  <table id="barber_shops_lists" class="table-responsive table table-striped" cellspacing="0" width="100%">
+    <thead>
+      <tr>
+        <th><%= t 'app.actions' %></th>
+        <th><%= t 'barber_shops.code' %></th>
+        <th><%= t 'barber_shops.name' %></th>
+        <th><%= t 'barber_shops.business_name' %></th>
+        <th><%= t 'barber_shops.nit' %></th>
+        <th><%= t 'barber_shops.address' %></th>
+        <th><%= t 'barber_shops.city' %></th>
+        <th><%= t 'barber_shops.phone' %></th>
+        <th><%= t 'barber_shops.owner' %></th>
+        <th><%= t 'barber_shops.enable' %></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @barber_shops.each do |barber_shop| %>
+      <tr>
+        <td style="width: 150px; display: block">
+          <%= link_to '', barber_shop, :class => 'btn btn-primary  btn-sm glyphicon glyphicon-eye-open' %></span>
+          <%= link_to '', edit_barber_shop_path(barber_shop), :class => 'btn btn-info  btn-sm glyphicon glyphicon-pencil' %></span>
+          <%= link_to ' ', barber_shop, method: :delete, data: { confirm: t('app.messages_confirmation_delete') }, :class => 'small btn  btn-danger btn-sm glyphicon glyphicon-trash' %></span>
+        </td>
+        <td><%= barber_shop.code %></td>
+        <td><%= barber_shop.name %></td>
+        <td><%= barber_shop.business_name %></td>
+        <td><%= barber_shop.nit %></td>
+        <td><%= barber_shop.address %></td>
+        <td><%= barber_shop.city %></td>
+        <td><%= barber_shop.phone %></td>
+        <td><%= barber_shop.owner %></td>
+        <td><%= case barber_shop.enable
+        when true
+          "SI"
+        when false
+          "NO"
+        end %>
+      </td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
 <br>

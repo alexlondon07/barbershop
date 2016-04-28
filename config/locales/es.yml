@@ -260,3 +260,5 @@ es:
       title: "Editar Barberia"
     new:
       title: "Crear Barberia"
+    show:
+      title: "Ver Barberia"
