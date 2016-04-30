@@ -1,0 +1,35 @@
+<div class="page-header">
+  <%= link_to new_line_path, class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    New Line
+  <% end %>
+  <h1>Listing lines</h1>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+            <th>Name</th>
+            <th>Code</th>
+            <th>Description</th>
+            <th>Enable</th>
+            <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= content_tag_for(:tr, @lines) do |line| %>
+            <td><%= line.name %></td>
+            <td><%= line.code %></td>
+            <td><%= line.description %></td>
+            <td><%= line.enable %></td>
+            <td><%= link_to 'Show', line %></td>
+        <td><%= link_to 'Edit', edit_line_path(line) %></td>
+        <td><%= link_to 'Destroy', line, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
+    </tbody>
+  </table>
+</div>
