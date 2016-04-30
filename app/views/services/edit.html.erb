@@ -1,13 +1,13 @@
 <div class="page-header">
   <%= link_to services_path, class: 'btn btn-default' do %>
     <span class="glyphicon glyphicon-list-alt"></span>
-    Back
+    <%= t ('app.back') %>
   <% end %>
   <%= link_to @service, class: 'btn btn-primary' do %>
     <span class="glyphicon glyphicon-info-sign"></span>
-    Show
+    <%= t ('app.show') %>
   <% end %>
-  <h1>Editing service</h1>
+  <h1><%= t 'services.edit.title' %></h1>
 </div>
 
 <%= render 'form' %>

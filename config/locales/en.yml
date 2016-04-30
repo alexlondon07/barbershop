@@ -38,3 +38,14 @@ en:
       information: "Information to BarberShops"
     show:
         title: "Show BarberShops"
+
+  services:
+    index:
+      title: "Listing Service"
+    edit:
+      title: "Edit Service"
+    new:
+      title: "Create Service"
+      information: "Information to Service"
+    show:
+        title: "Show Service"

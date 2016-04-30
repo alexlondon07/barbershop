@@ -1,56 +1,64 @@
-<%= form_for(@service, html: { class: "form-horizontal", role: "form" }) do |f| %>
-  <% if @service.errors.any? %>
-    <div class="alert alert-danger alert-dismissable" role="alert">
-      <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-      <h4><%= pluralize(@service.errors.count, "error") %> prohibited this service from being saved:</h4>
-
-      <ul>
-      <% @service.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
+<%= form_for @service, :html => { :class => 'form-horizontal' } do |f| %>
+<% if @service.errors.any? %>
+<div class="col-lg-10 col-lg-offset-2">
+  <div class="alert alert-danger">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <strong><%= t 'app.errors_messages' %></strong>
+    <ul>
+      <% @service.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
       <% end %>
-      </ul>
-    </div>
-  <% end %>
+    </ul>
+  </div>
+</div>
+<% end %>
 
-  <div class="form-group">
-    <%= f.label :name, class: "col-sm-2 control-label" %>
-    <div class="col-sm-10">
-      <%= f.text_field :name, class: "form-control" %>
-    </div>
+<div class="form-group">
+  <label class="col-sm-2 control-label"><%= t 'services.name' %><font color="#a94442">*</font></label>
+  <div class="col-sm-10">
+    <%= f.text_field :name , class: "form-control" %>
   </div>
-  <div class="form-group">
-    <%= f.label :code, class: "col-sm-2 control-label" %>
-    <div class="col-sm-10">
-      <%= f.text_field :code, class: "form-control" %>
-    </div>
+</div>
+
+<div class="form-group">
+  <label class="col-sm-2 control-label"><%= t 'services.code' %></label>
+  <div class="col-sm-10">
+    <%= f.text_field :code, class: "form-control" %>
   </div>
-  <div class="form-group">
-    <%= f.label :price, class: "col-sm-2 control-label" %>
-    <div class="col-sm-10">
-      <%= f.text_field :price, class: "form-control" %>
-    </div>
+</div>
+
+<div class="form-group">
+  <label class="col-sm-2 control-label"><%= t 'services.price' %></label>
+  <div class="col-sm-10">
+    <%= f.text_field :price, class: "form-control" %>
   </div>
-  <div class="form-group">
-    <%= f.label :description, class: "col-sm-2 control-label" %>
-    <div class="col-sm-10">
-      <%= f.text_area :description, class: "form-control" %>
-    </div>
+</div>
+
+<div class="form-group">
+  <label class="col-sm-2 control-label"><%= t 'services.description' %></label>
+  <div class="col-sm-10">
+    <%= f.text_area :description, class: "form-control" %>
   </div>
-  <div class="form-group">
-    <%= f.label :enable, class: "col-sm-2 control-label" %>
-    <div class="col-sm-10">
-      <%= f.check_box :enable, class: "form-control" %>
-    </div>
+</div>
+
+<div class="form-group">
+  <label class="col-sm-2 control-label"><%= t 'services.barber_shops' %></label>
+  <div class="col-sm-10">
+    <%= f.text_field :barber_shop, class: "form-control" %>
   </div>
-  <div class="form-group">
-    <%= f.label :barber_shop, class: "col-sm-2 control-label" %>
-    <div class="col-sm-10">
-      <%= f.text_field :barber_shop, class: "form-control" %>
-    </div>
+</div>
+
+<div class="form-group">
+  <label class="col-sm-2 control-label"><%= t 'services.enable' %></label>
+  <div class="col-sm-10">
+    <%= f.check_box :enable, class: "form-control" %>
   </div>
-  <div class="form-group">
-    <div class="col-sm-offset-2 col-sm-10">
-      <%= f.submit class: "btn btn-primary" %>
-    </div>
+</div>
+
+<div class="form-group">
+  <div class="col-sm-offset-2 col-sm-10">
+    <%= f.submit t('app.save'), class: "btn btn-primary pull-right" %>
   </div>
+</div>
+
 <% end %>

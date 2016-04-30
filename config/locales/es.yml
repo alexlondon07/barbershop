@@ -262,3 +262,21 @@ es:
       title: "Crear Barberia"
     show:
       title: "Ver Barberia"
+
+  #Traduccion de services
+  services:
+      name: "Nombre"
+      code: "Código"
+      description: "Descripción"
+      price: "Precio"
+      barber_shops: "Pertenece a Barberia"
+      enable: "Habilitado"
+
+      index:
+        title: "Listado de Servicios"
+      edit:
+        title: "Editar Servicio"
+      new:
+        title: "Crear Servicio"
+      show:
+        title: "Ver Servicio"
