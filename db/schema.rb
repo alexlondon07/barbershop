@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160430171544) do
+ActiveRecord::Schema.define(version: 20160430172058) do
 
   create_table "barber_shops", force: :cascade do |t|
     t.string   "code"
@@ -52,5 +52,17 @@ ActiveRecord::Schema.define(version: 20160430171544) do
   end
 
   add_index "services", ["barber_shop_id"], name: "index_services_on_barber_shop_id"
+
+  create_table "sublines", force: :cascade do |t|
+    t.string   "name"
+    t.string   "code"
+    t.text     "description"
+    t.integer  "line_id"
+    t.boolean  "enable"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "sublines", ["line_id"], name: "index_sublines_on_line_id"
 
 end

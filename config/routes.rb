@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :sublines
   resources :lines
   #Facilitar lo que la Internacionalizacion
   scope "(:locale)", locale: /es|en/ do
