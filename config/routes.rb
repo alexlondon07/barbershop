@@ -1,11 +1,12 @@
 Rails.application.routes.draw do
-  resources :sublines
-  resources :lines
   #Facilitar lo que la Internacionalizacion
   scope "(:locale)", locale: /es|en/ do
   resources :barber_shops
   resources :services
+  resources :sublines
+  resources :lines
   end
+
   get 'welcome/index'
 
   # The priority is based upon order of creation: first created -> highest priority.

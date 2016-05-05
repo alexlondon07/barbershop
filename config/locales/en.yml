@@ -49,3 +49,13 @@ en:
       information: "Information to Service"
     show:
         title: "Show Service"
+
+  lines:
+      index:
+        title: "Listing de Lines"
+      edit:
+        title: "Edit line"
+      new:
+        title: "Create line"
+      show:
+        title: "Show line"

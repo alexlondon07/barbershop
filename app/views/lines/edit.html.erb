@@ -1,13 +1,13 @@
 <div class="page-header">
   <%= link_to lines_path, class: 'btn btn-default' do %>
     <span class="glyphicon glyphicon-list-alt"></span>
-    Back
+    <%= t ('app.back') %>
   <% end %>
   <%= link_to @line, class: 'btn btn-primary' do %>
     <span class="glyphicon glyphicon-info-sign"></span>
-    Show
+    <%= t ('app.show') %>
   <% end %>
-  <h1>Editing line</h1>
+  <h1><%= t 'lines.edit.title' %></h1>
 </div>
 
 <%= render 'form' %>

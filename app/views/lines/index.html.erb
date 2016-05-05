@@ -1,35 +1,39 @@
-<div class="page-header">
-  <%= link_to new_line_path, class: 'btn btn-primary' do %>
-    <span class="glyphicon glyphicon-plus"></span>
-    New Line
-  <% end %>
-  <h1>Listing lines</h1>
-</div>
-
 <div class="table-responsive">
-  <table class="table table-striped table-bordered table-hover">
+  <h1><%= t 'lines.index.title' %></h1>
+  <%= link_to new_line_path, class: "btn btn-primary btn-lg active pull-right", role: "button" do %>
+  <span class="glyphicon glyphicon-plus"></span>
+  <%= t 'lines.new.title' %>
+  <% end %>
+
+  <table id="lines_lists" class="table-responsive table table-striped" cellspacing="0" width="100%">
     <thead>
       <tr>
-            <th>Name</th>
-            <th>Code</th>
-            <th>Description</th>
-            <th>Enable</th>
-            <th></th>
-        <th></th>
-        <th></th>
+        <th><%= t 'app.actions' %></th>
+        <th><%= t 'services.name' %></th>
+        <th><%= t 'services.code' %></th>
+        <th><%= t 'services.description' %></th>
+        <th><%= t 'services.enable' %></th>
       </tr>
     </thead>
 
     <tbody>
       <%= content_tag_for(:tr, @lines) do |line| %>
-            <td><%= line.name %></td>
-            <td><%= line.code %></td>
-            <td><%= line.description %></td>
-            <td><%= line.enable %></td>
-            <td><%= link_to 'Show', line %></td>
-        <td><%= link_to 'Edit', edit_line_path(line) %></td>
-        <td><%= link_to 'Destroy', line, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      <% end %>
-    </tbody>
-  </table>
+      <td style="width: 150px; display: block">
+        <%= link_to '', line, :class => 'btn btn-primary  btn-sm glyphicon glyphicon-eye-open' %></span>
+        <%= link_to '', edit_line_path(line), :class => 'btn btn-info  btn-sm glyphicon glyphicon-pencil' %></span>
+        <%= link_to ' ', line, method: :delete, data: { confirm: t('app.messages_confirmation_delete') }, :class => 'small btn  btn-danger btn-sm glyphicon glyphicon-trash' %></span>
+      </td>
+      <td><%= line.name %></td>
+      <td><%= line.code %></td>
+      <td><%= line.description %></td>
+      <td><%= case line.enable
+      when true
+        "SI"
+      when false
+        "NO"
+      end %>
+    </td>
+    <% end %>
+  </tbody>
+</table>
 </div>

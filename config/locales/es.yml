@@ -280,3 +280,19 @@ es:
         title: "Crear Servicio"
       show:
         title: "Ver Servicio"
+
+  #Traduccion de Lines
+  lines:
+      name: "Nombre"
+      code: "Código"
+      description: "Descripción"
+      enable: "Habilitado"
+
+      index:
+        title: "Listado de Lineas"
+      edit:
+        title: "Editar Linea"
+      new:
+        title: "Crear Linea"
+      show:
+        title: "Ver Linea"

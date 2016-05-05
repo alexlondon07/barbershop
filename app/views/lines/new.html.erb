@@ -1,9 +1,9 @@
 <div class="page-header">
   <%= link_to lines_path, class: 'btn btn-default' do %>
     <span class="glyphicon glyphicon-list-alt"></span>
-    Back
+    <%= t ('app.back') %>
   <% end %>
-  <h1>New line</h1>
+  <h1><%= t 'lines.new.title' %></h1>
 </div>
 
 <%= render 'form' %>
