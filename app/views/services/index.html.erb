@@ -15,7 +15,6 @@
         <th><%= t 'services.price' %></th>
         <th><%= t 'services.description' %></th>
         <th><%= t 'services.enable' %></th>
-        <th><%= t 'services.barber_shops' %></th>
       </tr>
     </thead>
 
@@ -30,8 +29,14 @@
       <td><%= service.code %></td>
       <td><%= service.price %></td>
       <td><%= service.description %></td>
-      <td><%= service.enable %></td>
-      <td><%= service.barber_shop %></td>
+      <td>
+        <%= case service.enable
+          when true
+            "SI"
+          when false
+            "NO"
+          end %>
+      </td>
       <% end %>
     </tbody>
   </table>

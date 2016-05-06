@@ -38,13 +38,14 @@
         <td><%= barber_shop.city %></td>
         <td><%= barber_shop.phone %></td>
         <td><%= barber_shop.owner %></td>
-        <td><%= case barber_shop.enable
-        when true
-          "SI"
-        when false
-          "NO"
-        end %>
-      </td>
+        <td>
+          <%= case barber_shop.enable
+            when true
+              "SI"
+            when false
+              "NO"
+            end %>
+        </td>
     </tr>
     <% end %>
   </tbody>
