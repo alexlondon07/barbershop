@@ -15,6 +15,7 @@
         <th><%= t 'services.price' %></th>
         <th><%= t 'services.description' %></th>
         <th><%= t 'services.enable' %></th>
+        <th><%= t 'services.barber_shops' %></th>
       </tr>
     </thead>
 
@@ -37,6 +38,7 @@
             "NO"
           end %>
       </td>
+      <td><%= service.barber_shop.name %></td>
       <% end %>
     </tbody>
   </table>
