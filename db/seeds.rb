@@ -6,7 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 #Barbershop
-30.times do
+15.times do
  barbershop = BarberShop.create(
    name: Faker::Address.street_name,
    code: Faker::Code.isbn,
