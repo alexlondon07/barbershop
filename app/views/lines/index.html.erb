@@ -12,6 +12,7 @@
         <th><%= t 'services.name' %></th>
         <th><%= t 'services.code' %></th>
         <th><%= t 'services.description' %></th>
+        <th><%= t 'services.barber_shops' %></th>
         <th><%= t 'services.enable' %></th>
       </tr>
     </thead>
@@ -26,6 +27,7 @@
       <td><%= line.name %></td>
       <td><%= line.code %></td>
       <td><%= line.description %></td>
+      <td><%= line.barber_shop.name %></td>
       <td><%= case line.enable
       when true
         "SI"

@@ -1,7 +1,4 @@
 class BarberShop < ActiveRecord::Base
-# belongs_to :line, dependent: :destroy
-# belongs_to :service, dependent: :destroy
-
 has_many :line, dependent: :destroy
 has_many :service, dependent: :destroy
 

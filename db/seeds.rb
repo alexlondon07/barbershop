@@ -36,6 +36,7 @@
    name: Faker::Name.name,
    code: Faker::Code.isbn,
    description: Faker::Lorem.sentence,
+   barber_shop_id: '1',
    enable: 't'
  )
 
